@@ -1,0 +1,11 @@
+body.cmyk {
+  --primary-color: cyan;
+  --secondary-color: magenta;
+  div {
+    &.custom-div {
+      & + span {
+        --primary-color: green;
+      }
+    }
+  }
+}

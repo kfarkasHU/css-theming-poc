@@ -1,0 +1,9 @@
+body.rgb {
+  div {
+    &.custom-div {
+      & + span {
+        --primary-color: yellow;
+      }
+    }
+  }
+}

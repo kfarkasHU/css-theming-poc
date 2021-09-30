@@ -1,0 +1,20 @@
+body {
+  background-color: var(--primary-color);
+
+  span {
+    color: var(--tertiary-color);
+  }
+
+  div {
+    background-color: var(--secondary-color);
+
+    &.custom-div {
+      background-color: var(--tertiary-color);
+
+      & + span {
+        color: var(--primary-color);
+        background-color: black;
+      }
+    }
+  }
+}

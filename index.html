@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link href="./css/styles.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <select onchange="onThemeChanged()" id="theme-selector">
+      <option value="RGB">RGB</option>
+      <option value="CMYK">CMYK</option>
+    </select>
+    <div>secondary</div>
+    <span>tertiary</span>
+    <div class="custom-div">tertiary</div>
+    <span>primary</span>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTheme(getSelectedTheme());
+      });
+
+      function onThemeChanged() {
+        setTheme(getSelectedTheme());
+      }
+
+      function setTheme(themeName) {
+        document.body.classList.forEach(m => document.body.classList.remove(m));
+        document.body.classList.add(themeName.toLowerCase());
+      }
+
+      function getSelectedTheme() {
+        return getThemeSelector().value;
+      }
+
+      function getThemeSelector() {
+        return document.getElementById("theme-selector");
+      }
+    </script>
+  </body>
+</html>

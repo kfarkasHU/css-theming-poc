@@ -1,0 +1,14 @@
+{
+  "name": "css-poc",
+  "version": "1.0.0",
+  "description": "SASS variable POC",
+  "scripts": {
+    "build": "npx sass src/styles.scss:css/styles.css --no-source-map",
+    "build:watch": "npx sass src/styles.scss:css/styles.css --watch --no-source-map"
+  },
+  "author": "kfarkasHU",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}
